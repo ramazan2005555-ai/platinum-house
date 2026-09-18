@@ -68,7 +68,7 @@
     <p class="card-desc">Загрузите или укажите ссылки на изображения меню (рекомендуется: JPG, WebP, не более 5 МБ)</p>
     <div class="admin-row">
       <div class="admin-field">
-        <label>Меню — страница 1</label>
+        <label>Меню — Основное меню</label>
         <div class="image-preview" id="preview0">
           <div class="placeholder">Нет изображения</div>
         </div>
@@ -82,7 +82,7 @@
         <input type="file" id="fileInput0" accept="image/*" style="display:none">
       </div>
       <div class="admin-field">
-        <label>Меню — страница 2</label>
+        <label>Меню — Завтраки</label>
         <div class="image-preview" id="preview1">
           <div class="placeholder">Нет изображения</div>
         </div>
@@ -96,11 +96,43 @@
         <input type="file" id="fileInput1" accept="image/*" style="display:none">
       </div>
     </div>
+    <div class="admin-row" style="margin-top:20px">
+      <div class="admin-field">
+        <label>Меню — Мангал</label>
+        <div class="image-preview" id="preview2">
+          <div class="placeholder">Нет изображения</div>
+        </div>
+        <div class="image-upload-area">
+          <input type="text" id="menuUrl2" placeholder="URL изображения или загрузите файл">
+        </div>
+        <div class="image-actions">
+          <button class="btn-upload" onclick="document.getElementById('fileInput2').click()">Загрузить файл</button>
+          <button class="btn-clear" onclick="clearImage(2)">Очистить</button>
+        </div>
+        <input type="file" id="fileInput2" accept="image/*" style="display:none">
+      </div>
+      <div class="admin-field">
+        <label>Меню — Барная карта</label>
+        <div class="image-preview" id="preview3">
+          <div class="placeholder">Нет изображения</div>
+        </div>
+        <div class="image-upload-area">
+          <input type="text" id="menuUrl3" placeholder="URL изображения или загрузите файл">
+        </div>
+        <div class="image-actions">
+          <button class="btn-upload" onclick="document.getElementById('fileInput3').click()">Загрузить файл</button>
+          <button class="btn-clear" onclick="clearImage(3)">Очистить</button>
+        </div>
+        <input type="file" id="fileInput3" accept="image/*" style="display:none">
+      </div>
+    </div>
     <div class="admin-field" style="margin-top:8px">
       <label>Подписи к изображениям</label>
       <div class="admin-row">
-        <input type="text" id="menuLabel0" placeholder="Подпись к фото 1">
-        <input type="text" id="menuLabel1" placeholder="Подпись к фото 2">
+        <input type="text" id="menuLabel0" placeholder="Основное меню">
+        <input type="text" id="menuLabel1" placeholder="Завтраки">
+        <input type="text" id="menuLabel2" placeholder="Мангал">
+        <input type="text" id="menuLabel3" placeholder="Барная карта">
       </div>
     </div>
   </div>

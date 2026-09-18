@@ -16,8 +16,13 @@
     hoursNote: 'Завтрак: 07:00–11:00',
     whatsapp: 'https://wa.me/74951234567',
     telegram: '',
-    menuImages: ['', ''],
-    menuLabels: ['Меню — страница 1', 'Меню — страница 2']
+    menuImages: [
+      './img/menu/main-menu.jpeg',
+      './img/menu/breakfasts.jpeg',
+      './img/menu/mangal.jpeg',
+      './img/menu/bar-card.jpeg'
+    ],
+    menuLabels: ['Основное меню', 'Завтраки', 'Мангал', 'Барная карта']
   };
 
   let currentData = {};
@@ -53,11 +58,17 @@
     setVal('telegram', currentData.telegram);
     setVal('menuUrl0', currentData.menuImages[0] || '');
     setVal('menuUrl1', currentData.menuImages[1] || '');
+    setVal('menuUrl2', currentData.menuImages[2] || '');
+    setVal('menuUrl3', currentData.menuImages[3] || '');
     setVal('menuLabel0', currentData.menuLabels[0] || '');
     setVal('menuLabel1', currentData.menuLabels[1] || '');
+    setVal('menuLabel2', currentData.menuLabels[2] || '');
+    setVal('menuLabel3', currentData.menuLabels[3] || '');
 
     updatePreview(0, currentData.menuImages[0]);
     updatePreview(1, currentData.menuImages[1]);
+    updatePreview(2, currentData.menuImages[2]);
+    updatePreview(3, currentData.menuImages[3]);
   }
 
   function getVal(id) { var el = document.getElementById(id); return el ? el.value : ''; }
@@ -77,8 +88,8 @@
       hoursNote: getVal('hoursNote'),
       whatsapp: getVal('whatsapp'),
       telegram: getVal('telegram'),
-      menuImages: [getVal('menuUrl0'), getVal('menuUrl1')],
-      menuLabels: [getVal('menuLabel0'), getVal('menuLabel1')]
+      menuImages: [getVal('menuUrl0'), getVal('menuUrl1'), getVal('menuUrl2'), getVal('menuUrl3')],
+      menuLabels: [getVal('menuLabel0'), getVal('menuLabel1'), getVal('menuLabel2'), getVal('menuLabel3')]
     };
   }
 
@@ -199,8 +210,10 @@
 
     document.getElementById('fileInput0').addEventListener('change', function () { handleFileUpload(0); });
     document.getElementById('fileInput1').addEventListener('change', function () { handleFileUpload(1); });
+    document.getElementById('fileInput2').addEventListener('change', function () { handleFileUpload(2); });
+    document.getElementById('fileInput3').addEventListener('change', function () { handleFileUpload(3); });
 
-    ['menuUrl0', 'menuUrl1'].forEach(function (id) {
+    ['menuUrl0', 'menuUrl1', 'menuUrl2', 'menuUrl3'].forEach(function (id) {
       document.getElementById(id).addEventListener('input', function () {
         var idx = parseInt(id.replace('menuUrl', ''));
         updatePreview(idx, this.value);

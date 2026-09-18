@@ -1,10 +1,15 @@
-const CACHE = 'platinumhouse-v1';
+const CACHE = 'platinumhouse-v2';
 
 const PRECACHE = [
-  '/',
-  '/css/style.css',
-  '/js/main.js',
-  '/manifest.json'
+  './',
+  './index.html',
+  './css/style.css',
+  './js/main.js',
+  './manifest.json',
+  './img/menu/main-menu.jpeg',
+  './img/menu/breakfasts.jpeg',
+  './img/menu/mangal.jpeg',
+  './img/menu/bar-card.jpeg'
 ];
 
 self.addEventListener('install', function (event) {

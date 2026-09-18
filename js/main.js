@@ -18,9 +18,14 @@
     hoursNote: 'Завтрак: 07:00–11:00',
     whatsapp: 'https://wa.me/74951234567',
     telegram: '',
-    menuImages: ['', ''],
-    menuLabels: ['Меню — страница 1', 'Меню — страница 2'],
-    ogImage: '/img/og-image.jpg'
+    menuImages: [
+      './img/menu/main-menu.jpeg',
+      './img/menu/breakfasts.jpeg',
+      './img/menu/mangal.jpeg',
+      './img/menu/bar-card.jpeg'
+    ],
+    menuLabels: ['Основное меню', 'Завтраки', 'Мангал', 'Барная карта'],
+    ogImage: './img/og-image.jpg'
   };
 
   let data = {};
@@ -46,6 +51,23 @@
         if (data.restaurantName && data.restaurantName !== 'PLATINUM HOUSE') {
           data.restaurantName = 'PLATINUM HOUSE';
           localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+        Object.keys(DEFAULT_DATA).forEach(function (key) {
+          if (data[key] === undefined) data[key] = DEFAULT_DATA[key];
+        });
+        if (data.menuImages && data.menuImages.length === DEFAULT_DATA.menuImages.length) {
+          data.menuImages = data.menuImages.map(function (src, i) {
+            return src && src.trim() ? src : DEFAULT_DATA.menuImages[i];
+          });
+        } else {
+          data.menuImages = DEFAULT_DATA.menuImages.slice();
+        }
+        if (data.menuLabels && data.menuLabels.length === DEFAULT_DATA.menuLabels.length) {
+          data.menuLabels = data.menuLabels.map(function (label, i) {
+            return label && label.trim() ? label : DEFAULT_DATA.menuLabels[i];
+          });
+        } else {
+          data.menuLabels = DEFAULT_DATA.menuLabels.slice();
         }
       } else {
         data = { ...DEFAULT_DATA };
@@ -137,6 +159,12 @@
           ph.textContent = 'Нет изображения';
           wrapper.appendChild(ph);
         }
+      }
+    });
+
+    document.querySelectorAll('.gallery-label').forEach(function (label, index) {
+      if (data.menuLabels && data.menuLabels[index]) {
+        label.textContent = data.menuLabels[index];
       }
     });
 
@@ -453,7 +481,7 @@
     /* Register service worker */
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/sw.js').catch(function () {});
+        navigator.serviceWorker.register('./sw.js').catch(function () {});
       });
     }
   }
