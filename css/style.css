@@ -1,4 +1,4 @@
-/* =============================
+﻿/* =============================
    PLATINUM HOUSE — Luxury Styles
    ============================= */
 
@@ -504,10 +504,10 @@ button {
 }
 
 .gallery-img-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 2px;
-    aspect-ratio: 1280 / 905;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    background: rgba(10,10,10,0.55);
     background: var(--black-2);
     cursor: pointer;
     border: 1px solid rgba(255,255,255,0.05);
@@ -520,8 +520,8 @@ button {
 
   .gallery-img {
     width: 100%;
-    height: 100%;
-  object-fit: cover;
+    height: auto;
+    object-fit: contain;
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -602,7 +602,10 @@ button {
   }
 
   .gallery-img-wrapper {
-    aspect-ratio: 1280 / 905;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    background: rgba(10,10,10,0.55);
   }
 
   .gallery-overlay {
@@ -1135,3 +1138,5 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+
