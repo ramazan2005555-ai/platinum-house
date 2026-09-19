@@ -122,6 +122,7 @@ button {
    Navigation
    ============================= */
 .navbar {
+  border-bottom: 1px solid rgba(201,168,76,0.25); background: rgba(7,7,7,0.75); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   position: fixed;
   top: 0;
   left: 0;
@@ -179,6 +180,7 @@ button {
 }
 
 .nav-link {
+  font-size: 0.78rem; letter-spacing: 2.5px; text-transform: uppercase; color: #f3e8c4;
   font-size: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -261,6 +263,7 @@ button {
   }
 
   .nav-link {
+  font-size: 0.78rem; letter-spacing: 2.5px; text-transform: uppercase; color: #f3e8c4;
     font-size: 1.1rem;
     letter-spacing: 4px;
   }
@@ -355,6 +358,7 @@ button {
 }
 
 .hero-divider {
+  width: 110px; height: 1px; background: linear-gradient(90deg, transparent, #e4c96a, transparent); box-shadow: 0 0 18px rgba(228,201,106,0.7);
   width: 80px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
@@ -362,6 +366,7 @@ button {
 }
 
 .hero-subtitle {
+  letter-spacing: 5px; font-weight: 400;
   font-size: clamp(1rem, 1.8vw, 1.25rem);
   font-size: clamp(0.85rem, 1.5vw, 1.05rem);
   font-weight: 300;
@@ -506,6 +511,7 @@ button {
 }
 
 .gallery-img-wrapper {
+  border: 1px solid rgba(201,168,76,0.28); border-radius: 6px; box-shadow: 0 24px 60px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(201,168,76,0.06); background: radial-gradient(120% 100% at 50% 0%, rgba(201,168,76,0.08), rgba(0,0,0,0.9) 75%);
   box-shadow: 0 20px 60px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(201,168,76,0.12);
     position: relative;
     overflow: hidden;
@@ -583,6 +589,7 @@ button {
 }
 
 .gallery-number {
+  color: #e4c96a; font-family: 'Playfair Display', Georgia, serif; letter-spacing: 3px;
   font-family: var(--font-serif);
   font-size: 0.85rem;
   color: var(--gold);
@@ -590,6 +597,7 @@ button {
 }
 
 .gallery-label {
+  font-family: 'Playfair Display', Georgia, serif; letter-spacing: 0.12em; text-transform: uppercase; color: #f3e2ae;
   font-size: 0.8rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -608,6 +616,7 @@ button {
   }
 
   .gallery-img-wrapper {
+  border: 1px solid rgba(201,168,76,0.28); border-radius: 6px; box-shadow: 0 24px 60px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(201,168,76,0.06); background: radial-gradient(120% 100% at 50% 0%, rgba(201,168,76,0.08), rgba(0,0,0,0.9) 75%);
   box-shadow: 0 20px 60px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(201,168,76,0.12);
     position: relative;
     overflow: hidden;
@@ -635,6 +644,7 @@ button {
    Lightbox
    ============================= */
 .lightbox {
+  background: rgba(4,4,4,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   background: radial-gradient(ellipse at center, rgba(20,18,14,0.98) 0%, rgba(0,0,0,0.99) 100%);
   position: fixed;
   inset: 0;
@@ -688,6 +698,7 @@ button {
 }
 
 .lightbox-img {
+  object-fit: contain; max-height: 88vh; border-radius: 6px; box-shadow: 0 0 120px rgba(201,168,76,0.12), inset 0 0 0 1px rgba(201,168,76,0.20);
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
@@ -957,6 +968,7 @@ button {
    Footer
    ============================= */
 .footer {
+  border-top: 1px solid rgba(201,168,76,0.18);
   padding: 40px 24px;
   max-width: var(--container);
   margin: 0 auto;
